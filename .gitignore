@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+voice.py
+video.py
+label.py
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.engine
+
+# Datasets
+datasets/
+data/
+train/
+
+# Videos
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.png
+
+# Logs / outputs
+runs/
+outputs/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db

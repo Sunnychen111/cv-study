@@ -1,0 +1,7 @@
+path: D:/实习技术学习计划
+
+train: train 
+val: train
+
+names:
+  0: pg
