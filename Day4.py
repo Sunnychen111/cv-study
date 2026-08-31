@@ -149,12 +149,3 @@ for track_idx,detection_idx in zip(row_idx,col_idx):
         x_pred,P_pred = predict(x1,P1,F,Q)
         x1,P1 = update(x_pred,P_pred,cx)
         print(x1,P1)
-
-    
-
-
-    
-    
-    
-
-
