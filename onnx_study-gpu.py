@@ -391,38 +391,55 @@ x2 = np.random.randn(
     1,3,320,320
 ).astype(np.float32)
 
+x2_gpu = ort.OrtValue.ortvalue_from_numpy(
+    x2,
+    "cuda",
+    0
+)   #将x2从CPU提前放到CUDA上
+
 
 session = ort.InferenceSession(
     "simple_model.onnx",
-    provider=["CPUExecutionProvider"]
+    providers=["CUDAExecutionProvider"]
 )
 
 
 input_name = session.get_inputs()[0].name
+output_name = session.get_outputs()[0].name
+
+io_blinding = session.io_binding()
+io_blinding.bind_ortvalue_input(
+    input_name,
+    x2_gpu
+)
+
+output_gpu = ort.OrtValue.ortvalue_from_shape_and_type(
+    [1, 3],
+    np.float32,
+    "cuda",
+    0
+)
+io_blinding.bind_ortvalue_output(
+    output_name,
+    output_gpu
+)
 
 for _ in range(warms_up):
-    output = session.run(
-        None,
-        {
-            "input":x2
-        }
-    )
+    session.run_with_iobinding(io_blinding)
+    output = io_blinding.get_outputs()
 
 # benchmark
 lantencies = []
 
-i=0
 for i in range(test_run):
     start = time.perf_counter()
-    output = session.run(
-        None,
-        {
-            "input":x2
-        }
-    )
+    session.run_with_iobinding(io_blinding)
+    output = io_blinding.get_outputs()
     end = time.perf_counter()
     lantencies.append( (end-start) *1000)
-    i+=1
+
+print("Output device:", output[0].device_name())
+
 
 avg_lantency = np.mean(lantencies)
 min_lantency = np.min(lantencies)
@@ -433,6 +450,7 @@ fps = 1000 / avg_lantency
 p95_latency = np.percentile(lantencies, 95)
 p99_latency = np.percentile(lantencies, 99)
 
+print("onnx")
 print(avg_lantency,min_lantency,max_lantency,median_lantency,p95_latency,p99_latency)
 
 print(fps)
@@ -440,13 +458,17 @@ print(fps)
 lantencies_pytorch =[]
 
 x = torch.from_numpy(x2)
+model = model.cuda()
+x = x.cuda()
 with torch.inference_mode():
     for _ in range(warms_up):
         output = model(x)
 with torch.inference_mode():
     for _ in range(test_run):
+        torch.cuda.synchronize()
         start = time.perf_counter()
         output = model(x)
+        torch.cuda.synchronize()
         end = time.perf_counter()
         lantencies_pytorch.append((end-start)*1000)
 
@@ -457,6 +479,7 @@ median_lantency_pytorch = np.median(lantencies_pytorch)
 p95_latency_pytorch = np.percentile(lantencies_pytorch,95)
 p99_latency_pytorch = np.percentile(lantencies_pytorch,99)
 
+print("pytorch")
 print(avg_lantency_pytorch,min_lantency_pytorch,max_lantency_pytorch,median_lantency_pytorch,p95_latency_pytorch,p99_latency_pytorch)
 print(1000/avg_lantency_pytorch)
 
