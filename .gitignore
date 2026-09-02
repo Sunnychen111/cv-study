@@ -13,6 +13,7 @@ env/
 # IDE
 .vscode/
 .idea/
+trt_cache/
 
 # Model weights
 *.pt
@@ -31,6 +32,10 @@ train/
 *.mov
 *.jpg
 *.png
+.exe
+.ilk
+.obj
+.pdb
 
 # Logs / outputs
 runs/
