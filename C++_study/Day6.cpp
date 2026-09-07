@@ -26,6 +26,15 @@ Detection::Detection(float x1, float y1, float x2, float y2, float conf, int id)
     this->class_id = id;
 }
 
+struct AssociationResult
+{
+    vector<pair<int, int>> matches;
+    vector<int> unmatched_tracks;
+    vector<int> unmatched_detection;
+
+    AssociationResult() {};
+};
+
 float getArea(const Detection &det) // C++ 定义函数调用det
 {
     float Area = (det.x2 - det.x1) * (det.y2 - det.y1);
@@ -79,6 +88,94 @@ vector<vector<float>> cost_matrix(vector<vector<float>> iou)
         cost_martix.push_back(cost_row);
     }
     return cost_martix;
+}
+
+// 这个threshold是iou的阈值
+vector<vector<float>> Gate(vector<vector<float>> cost_matrix, float threshold)
+{
+    vector<vector<float>> applymatrix = cost_matrix;
+    for (int i = 0; i < cost_matrix.size(); i++)
+    {
+        for (int j = 0; j < cost_matrix[0].size(); j++)
+        {
+            if (cost_matrix[i][j] >= 1 - threshold)
+            {
+                applymatrix[i][j] = 1e6;
+            }
+        }
+    }
+    return applymatrix;
+}
+
+pair<int, int> find_min(vector<bool> &detection, vector<bool> &track, const vector<vector<float>> &gate)
+{
+    float min = 1e6;
+    int de = -1, tr = -1;
+    pair<int, int> match = {-1, -1};
+    for (int i = 0; i < gate.size(); i++)
+    {
+        for (int j = 0; j < gate[0].size(); j++)
+        {
+            if (gate[i][j] < min && detection[j] == false && track[i] == false)
+            {
+                min = gate[i][j];
+                de = j;
+                tr = i;
+            }
+        }
+    }
+    if (de != -1 && tr != -1)
+    {
+        detection[de] = true;
+        track[tr] = true;
+        match.first = tr;
+        match.second = de;
+    }
+    return match;
+}
+
+// 全局贪心匹配
+AssociationResult greedymatch(vector<vector<float>> gate)
+{
+    AssociationResult results;
+    vector<pair<int, int>> greedymatch;
+    pair<int, int> match;
+    vector<bool> tracks(gate.size(), false);
+    vector<bool> detection(gate[0].size(), false);
+    for (int i = 0; i < gate.size(); i++)
+    {
+        match = find_min(detection, tracks, gate);
+        if (match.first == -1 || match.second == -1)
+        {
+            break;
+        }
+        greedymatch.push_back(match);
+    }
+    results.matches = greedymatch;
+    vector<int> unmatched_resultes;
+    int i = 0;
+    for (const auto &track : tracks)
+    {
+        if (track == false)
+        {
+            unmatched_resultes.push_back(i);
+        }
+        i++;
+    }
+    results.unmatched_tracks = unmatched_resultes;
+    vector<int> unmatched_de;
+    int j = 0;
+    for (const auto &de : detection)
+    {
+        if (de == false)
+        {
+            unmatched_de.push_back(j);
+        }
+        j++;
+    }
+    results.unmatched_detection = unmatched_de;
+
+    return results;
 }
 
 int main()
@@ -152,5 +249,63 @@ int main()
         }
         cout << endl;
     }
+
+    float threshold = 0.3f; // 可以进行跟踪的iou阈值
+
+    vector<vector<float>> apply = Gate(cost, threshold);
+    cout << "ApplyGate" << endl;
+    for (int i = 0; i < apply.size(); i++)
+    {
+        for (int j = 0; j < apply[0].size(); j++)
+        {
+            cout << apply[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    vector<vector<float>> gate =
+        {
+            {0.319328f, 1e6f, 1e6f},
+            {1e6f, 0.529412f, 1e6f}};
+
+    AssociationResult results = greedymatch(gate);
+
+    for (const auto &match : results.matches)
+    {
+        cout << "Track "
+             << match.first
+             << " -> Detection "
+             << match.second
+             << endl;
+    }
+
+    cout << "Unmatches Tracks:" << endl;
+    if (results.unmatched_tracks.size() == 0)
+    {
+        cout << "None" << endl;
+    }
+    else
+    {
+        for (const auto &track : results.unmatched_tracks)
+        {
+            cout << track << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "Unmatches Detections:" << endl;
+    if (results.unmatched_detection.size() == 0)
+    {
+        cout << "None" << endl;
+    }
+    else
+    {
+        for (const auto &detection : results.unmatched_detection)
+        {
+            cout << detection << " ";
+        }
+        cout << endl;
+    }
+
     return 0;
 }

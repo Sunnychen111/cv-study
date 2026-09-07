@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{349662D4-8251-3296-A673-5DDE7C343E17}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_demo</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_demo.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_demo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_demo.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_demo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">opencv_demo.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">opencv_demo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">opencv_demo.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">opencv_demo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stitching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_alphamat500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_bgsegm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ccalib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_cvv500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dpm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_face500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_freetype500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_fuzzy500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_gapi500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hdf500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hfs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_img_hash500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_intensity_transform500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_line_descriptor500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_quality500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rapid500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_reg500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rgbd500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_saliency500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_signal500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_structured_light500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_surface_matching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videostab500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_wechat_qrcode500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xfeatures2d500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xobjdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xphoto500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xstereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_shape500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ptcloud500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_calib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_phase_unwrapping500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_optflow500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ximgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_photo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_tracking500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_highgui500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_video500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videoio500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_datasets500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgcodecs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_plot500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_text500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_features500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ml500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_geometry500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_flann500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_core500.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/AI_A_system/cv-study/C++_study/Opencv/build/Debug/opencv_demo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/AI_A_system/cv-study/C++_study/Opencv/build/Debug/opencv_demo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stitching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_alphamat500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_bgsegm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ccalib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_cvv500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dpm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_face500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_freetype500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_fuzzy500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_gapi500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hdf500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hfs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_img_hash500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_intensity_transform500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_line_descriptor500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_quality500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rapid500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_reg500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rgbd500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_saliency500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_signal500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_structured_light500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_surface_matching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videostab500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_wechat_qrcode500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xfeatures2d500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xobjdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xphoto500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xstereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_shape500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ptcloud500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_calib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_phase_unwrapping500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_optflow500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ximgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_photo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_tracking500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_highgui500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_video500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videoio500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_datasets500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgcodecs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_plot500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_text500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_features500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ml500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_geometry500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_flann500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_core500.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/AI_A_system/cv-study/C++_study/Opencv/build/Release/opencv_demo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/AI_A_system/cv-study/C++_study/Opencv/build/Release/opencv_demo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stitching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_alphamat500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_bgsegm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ccalib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_cvv500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dpm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_face500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_freetype500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_fuzzy500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_gapi500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hdf500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hfs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_img_hash500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_intensity_transform500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_line_descriptor500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_quality500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rapid500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_reg500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rgbd500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_saliency500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_signal500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_structured_light500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_surface_matching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videostab500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_wechat_qrcode500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xfeatures2d500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xobjdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xphoto500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xstereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_shape500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ptcloud500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_calib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_phase_unwrapping500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_optflow500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ximgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_photo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_tracking500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_highgui500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_video500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videoio500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_datasets500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgcodecs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_plot500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_text500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_features500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ml500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_geometry500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_flann500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_core500.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/AI_A_system/cv-study/C++_study/Opencv/build/MinSizeRel/opencv_demo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/AI_A_system/cv-study/C++_study/Opencv/build/MinSizeRel/opencv_demo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\27622\.conda\envs\cppcv\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stitching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_alphamat500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_bgsegm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ccalib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_cvv500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dpm500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_face500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_freetype500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_fuzzy500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_gapi500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hdf500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_hfs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_img_hash500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_intensity_transform500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_line_descriptor500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_quality500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rapid500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_reg500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_rgbd500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_saliency500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_signal500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_structured_light500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_superres500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_surface_matching500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videostab500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_wechat_qrcode500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xfeatures2d500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xobjdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xphoto500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_xstereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_shape500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ptcloud500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_calib500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_phase_unwrapping500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_optflow500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ximgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_objdetect500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_photo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_stereo500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_tracking500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_highgui500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_video500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_videoio500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_datasets500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgcodecs500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_plot500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_text500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_features500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_dnn500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_imgproc500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_ml500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_geometry500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_flann500.lib;C:\Users\27622\.conda\envs\cppcv\Library\lib\opencv_core500.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/AI_A_system/cv-study/C++_study/Opencv/build/RelWithDebInfo/opencv_demo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/AI_A_system/cv-study/C++_study/Opencv/build/RelWithDebInfo/opencv_demo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\AI_A_system\cv-study\C++_study\Opencv\CMakelists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/AI_A_system/cv-study/C++_study/Opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/AI_A_system/cv-study/C++_study/Opencv -BE:/AI_A_system/cv-study/C++_study/Opencv/build --check-stamp-file E:/AI_A_system/cv-study/C++_study/Opencv/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig-version.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules-release.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/AI_A_system/cv-study/C++_study/Opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/AI_A_system/cv-study/C++_study/Opencv -BE:/AI_A_system/cv-study/C++_study/Opencv/build --check-stamp-file E:/AI_A_system/cv-study/C++_study/Opencv/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig-version.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules-release.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/AI_A_system/cv-study/C++_study/Opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/AI_A_system/cv-study/C++_study/Opencv -BE:/AI_A_system/cv-study/C++_study/Opencv/build --check-stamp-file E:/AI_A_system/cv-study/C++_study/Opencv/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig-version.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules-release.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/AI_A_system/cv-study/C++_study/Opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/AI_A_system/cv-study/C++_study/Opencv -BE:/AI_A_system/cv-study/C++_study/Opencv/build --check-stamp-file E:/AI_A_system/cv-study/C++_study/Opencv/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig-version.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVConfig.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules-release.cmake;C:\Users\27622\.conda\envs\cppcv\Library\cmake\x64\vc17\lib\OpenCVModules.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\AI_A_system\cv-study\C++_study\Opencv\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\AI_A_system\cv-study\C++_study\Opencv\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\AI_A_system\cv-study\C++_study\Opencv\build\ZERO_CHECK.vcxproj">
+      <Project>{FF1A04AD-1363-302F-8353-9C1BC55C5845}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
