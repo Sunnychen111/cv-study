@@ -1,0 +1,57 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(YOLO_CPP)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# -------------------------
+# OpenCV
+# -------------------------
+find_package(OpenCV REQUIRED)
+
+# -------------------------
+# ONNX Runtime
+# -------------------------
+set(
+    ONNXRUNTIME_DIR
+    "E:/AI_A_system/cv-study/onnxruntime-win-x64-1.29.0"
+)
+
+# -------------------------
+# executable
+# -------------------------
+add_executable(
+    yolo_demo
+    main.cpp
+)
+
+# -------------------------
+# include directories
+# -------------------------
+target_include_directories(
+    yolo_demo
+    PRIVATE
+    ${OpenCV_INCLUDE_DIRS}
+    "${ONNXRUNTIME_DIR}/include"
+)
+
+# -------------------------
+# link libraries
+# -------------------------
+target_link_libraries(
+    yolo_demo
+    PRIVATE
+    ${OpenCV_LIBS}
+    "${ONNXRUNTIME_DIR}/lib/onnxruntime.lib"
+)
+
+# ONNX Runtime 的 .lib 仅用于链接；运行时仍需要同版本的 DLL。
+# 复制到可执行文件目录，避免从 PATH 意外加载 Conda 中的旧版本。
+add_custom_command(
+    TARGET yolo_demo
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${ONNXRUNTIME_DIR}/lib/onnxruntime.dll"
+        "$<TARGET_FILE_DIR:yolo_demo>/onnxruntime.dll"
+)

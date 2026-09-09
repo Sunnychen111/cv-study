@@ -1,3 +1,0 @@
-E:/AI_A_system/cv-study/C++_study/structure/build/CMakeFiles/mot_demo.dir
-E:/AI_A_system/cv-study/C++_study/structure/build/CMakeFiles/ALL_BUILD.dir
-E:/AI_A_system/cv-study/C++_study/structure/build/CMakeFiles/ZERO_CHECK.dir

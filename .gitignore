@@ -9,6 +9,8 @@ label.py
 venv/
 .venv/
 env/
+onnxruntime-win-x64-1.29.0/
+build/
 
 # IDE
 .vscode/
